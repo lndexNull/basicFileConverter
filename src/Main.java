@@ -29,4 +29,8 @@ public class Main {
 
     Zu beachten ist, dass der CSV input mit Semikolon (;) die Spalten trennt,
     und dass in jeder Zeile die gleiche Anzahl an Spalten stehen.
+
+
+    !!! getestet unter linux !!!
+    evtl. muss die mitarbeiter.csv ausserhalb vom src ordner liegen.
 */
