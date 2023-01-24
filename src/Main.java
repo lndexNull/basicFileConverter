@@ -1,21 +1,41 @@
 import java.io.IOException;
 
 public class Main {
+
+    private static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) throws IOException, InterruptedException {
         try{
             CSVReader csv = new CSVReader();
             JSONWriter json = new JSONWriter();
 
             System.out.println("the Program will now read the csv and convert it to a JSON.");
-            json.writer(csv.reader());
-            System.out.println("The Conversion Process should be finished.");
+            String[][] data = csv.reader();
+
+            System.out.println("Do you wish to alter the data?");
+            String confirmation = sc.NextLine();
+
+            if (confirmation.equals("y") || confirmation.equals("Y"))
+            {
+                data = edit(data);
+            }
+
+            json.writer(data);
+            System.out.println("\n\nThe Conversion Process should be finished.");
         }
         finally {
             System.out.println("This window will close in ~5 seconds");
             Thread.sleep(5000);
         }
     }
-}
+
+    private static String[][] edit(String[][] data){
+        
+
+
+    }
+}    
+
 
 /*
     Vereinfachtes beispiel von einem Betrieb der eine Mitarbeiterliste in Form einer CSV
