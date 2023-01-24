@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Editor {
     private Scanner sc = new Scanner(System.in);
 
+    public Editor() {}
+
     public String[][] editSelector(String[][] data){
         String[][] newData = null;
         System.out.println("Do you want to change a column(1), add/remove a column(2), change a row(3), add/remove a row(4) \n\n");
