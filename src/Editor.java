@@ -176,6 +176,7 @@ public class Editor {
             for (int i = 0; i < data[0].length; i++){
                 System.out.print(data[j][i]+" | ");
             }
+            System.out.println();
         }
         System.out.println("\nPlease input the number of the row you want to remove (row 0 can't be removed):");
         int deleteInt = Integer.parseInt(sc.nextLine());
