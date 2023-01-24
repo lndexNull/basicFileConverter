@@ -8,7 +8,7 @@ public class Editor {
     public String[][] editSelector(String[][] data){
         String[][] newData = null;
         System.out.println("Do you want to change a column(1), add/remove a column(2), change a row(3), add/remove a row(4) \n\n");
-        int changeVariant = sc.nextInt();
+        int changeVariant = Integer.parseInt(sc.nextLine());
 
         switch(changeVariant){
             case 1:
@@ -38,7 +38,7 @@ public class Editor {
             System.out.print(data[0][i]+" ("+i+") | ");
         }
         System.out.println("\nPlease input the number of the column you want to edit:");
-        int changeInt = sc.nextInt();
+        int changeInt = Integer.parseInt(sc.nextLine());
         if (changeInt < 0 || changeInt >= data.length) {
             System.out.println("invalid input");
             return data;
@@ -58,7 +58,7 @@ public class Editor {
         String[][] newData = null;
 
         System.out.println("Do you want to remove (1), or add (2) a column?");
-        int pathInt = sc.nextInt();
+        int pathInt = Integer.parseInt(sc.nextLine());
         switch(pathInt){
             case 1:
                 newData = removeColumn(data);
@@ -81,7 +81,7 @@ public class Editor {
             System.out.print(data[0][i]+" ("+i+") | ");
         }
         System.out.println("\nPlease input the number of the column you want to remove:");
-        int deleteInt = sc.nextInt();
+        int deleteInt = Integer.parseInt(sc.nextLine());
         if (deleteInt < 0 || deleteInt >= data[0].length) {
             System.out.println("invalid input");
             return data;
@@ -111,7 +111,7 @@ public class Editor {
                         newData[j][i] = name;
                     }
                     else{
-                        System.out.println("Input the Value for you new Column in row "+(j+1));
+                        System.out.println("Input the Value for you new Column in row "+(j));
                         newData[j][i] = sc.nextLine();
                     }
                     continue;
@@ -130,7 +130,7 @@ public class Editor {
             }
         }
         System.out.println("\nPlease input the number of the row you want to change (row 0 can't be changed, please use the change column function or that):");
-        int changeInt = sc.nextInt();
+        int changeInt = Integer.parseInt(sc.nextLine());
         if (changeInt < 1 || changeInt >= data.length) {
             System.out.println("invalid input");
             return data;
@@ -152,7 +152,7 @@ public class Editor {
         String[][] newData = null;
 
         System.out.println("Do you want to remove (1), or add (2) a row?");
-        int pathInt = sc.nextInt();
+        int pathInt = Integer.parseInt(sc.nextLine());
         switch(pathInt){
             case 1:
                 newData = removeRow(data);
@@ -178,7 +178,7 @@ public class Editor {
             }
         }
         System.out.println("\nPlease input the number of the row you want to remove (row 0 can't be removed):");
-        int deleteInt = sc.nextInt();
+        int deleteInt = Integer.parseInt(sc.nextLine());
         if (deleteInt < 1 || deleteInt >= data.length) {
             System.out.println("invalid input");
             return data;

@@ -2,11 +2,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-
-    private static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) throws IOException, InterruptedException {
+        Scanner sc = new Scanner(System.in);
+
         try{
+
             CSVReader csv = new CSVReader();
             JSONWriter json = new JSONWriter();
             Editor editor = new Editor();
@@ -33,6 +33,7 @@ public class Main {
             System.out.println(ex.getMessage());
         }
         finally {
+            sc.close();
             System.out.println("This window will close in ~5 seconds");
             Thread.sleep(5000);
         }

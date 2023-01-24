@@ -1,2 +1,23 @@
-[{"first name":"bobby","last name":"drop table","age":"23","position":"data security"},
-{"first name":"anna","last name":"hate humans","age":"31","position":"human resources"}]
+[
+    {
+        "first name": "bobby",
+        "last name": "drop table",
+        "age": "23",
+        "position": "data security",
+        "new col": "fun stuff"
+    },
+    {
+        "first name": "anna",
+        "last name": "hate humans",
+        "age": "31",
+        "position": "human resources",
+        "new col": "not so fun stuff"
+    },
+    {
+        "first name": "gunter",
+        "last name": "hanselmann",
+        "age": "69",
+        "position": "streetthug",
+        "new col": "YES"
+    }
+]
