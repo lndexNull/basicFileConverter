@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
@@ -8,31 +9,33 @@ public class Main {
         try{
             CSVReader csv = new CSVReader();
             JSONWriter json = new JSONWriter();
+            Editor editor = new Editor();
 
             System.out.println("the Program will now read the csv and convert it to a JSON.");
             String[][] data = csv.reader();
 
-            System.out.println("Do you wish to alter the data?");
-            String confirmation = sc.NextLine();
+            if(data == null){
+                throw new Exception("data was null");
+            }
+
+            System.out.println("Do you wish to alter the data? Y/N");
+            String confirmation = sc.nextLine();
 
             if (confirmation.equals("y") || confirmation.equals("Y"))
             {
-                data = edit(data);
+                data = editor.editSelector(data);
             }
 
             json.writer(data);
             System.out.println("\n\nThe Conversion Process should be finished.");
         }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
         finally {
             System.out.println("This window will close in ~5 seconds");
             Thread.sleep(5000);
         }
-    }
-
-    private static String[][] edit(String[][] data){
-        
-
-
     }
 }    
 

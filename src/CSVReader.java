@@ -34,7 +34,7 @@ private final String filename = "mitarbeiter.csv";
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
-            return new String[0][0];
+            return null;
         }
         finally {
             stream.close();
